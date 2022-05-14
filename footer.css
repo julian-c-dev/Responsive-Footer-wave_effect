@@ -18,7 +18,7 @@ body {
 footer {
   position: relative;
   width: 100%;
-  background: #3586ff;
+  background: #1c75bb;
   min-height: 100px;
   padding: 20px 50px;
   display: flex;
@@ -72,4 +72,51 @@ footer p {
   text-align: center;
   margin: 15px 0 10px 0;
   font-size: 1.1em;
+}
+
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(wave.png);
+  background-size: 500px 100px;
+}
+
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 5s linear infinite forwards;
+}
+
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.6;
+  bottom: 0;
+  animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave3 {
+  z-index: 997;
+  opacity: 0.4;
+  bottom: 0;
+  animation: animateWave 10s linear infinite backwards;
+}
+
+footer .wave#wave4 {
+  z-index: 998;
+  opacity: 0.2;
+  bottom: 10px;
+  animation: animateWave 4s linear infinite backwards;
+}
+
+@keyframes animateWave {
+  0% {
+    background-position-x: 500px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
 }
